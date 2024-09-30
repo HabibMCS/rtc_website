@@ -1,0 +1,395 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'RTC PortFolio',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'CONTACT',
+        href: '#',
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      Unlock remarkable growth with <span class="hidden xl:inline"> growth with  </span>
+      <span class="text-accent dark:text-white highlight"> RTC's </span> expert telemarketing strategies
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">RTC </span> empowers investors to grow their business and maximize revenue with industry expertise.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">RTC: Grow revenue </span>
+      Book now to reach new markets, expand your business, and unlock exceptional growth opportunities
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What RTC is Serving"
+    subtitle="We are pleased to offer a range of services, including"
+    items={[
+      {
+        title: 'Medicare',
+        description:
+          'Medicare is a federal health insurance program in the U.S. for individuals with certain disabilities and chronic conditions. It includes Part A (hospital coverage), Part B (outpatient care), Part C (Medicare Advantage), and Part D (prescription drug coverage).',
+        icon: 'tabler:stethoscope',
+      },
+      {
+        title: 'Final Expense',
+        description:
+          'Final expense refers to the costs associated with a persons funeral, burial, and related services after death. Final expense insurance is designed to cover these costs, alleviating the financial burden on family members during a difficult time.',
+        icon: 'tabler:grave-2',
+      },
+      {
+        title: 'DME (Durable Medical Equipment)',
+        description:
+          'We offer Durable Medical Equipment (DME) services, including custom braces designed to relieve pain in the neck, shoulders, joints, and other areas of the body. Additionally, we provide dental care and vision support to enhance overall health and well-being.',
+        icon: 'tabler:crutches',
+      },
+      {
+        title: 'ACA (Affordable Care Act)',
+        description:
+          'The Affordable Care Act (ACA) is a U.S. law aimed at increasing healthcare access, lowering costs, and improving quality. It established health insurance marketplaces, expanded Medicaid, and introduced protections for pre-existing conditions, making healthcare more affordable for millions of Americans.',
+        icon: 'tabler:vaccine',
+      },
+      {
+        title: 'Solar Campaign ',
+        description:
+          "The U.S. government’s solar campaign promotes the adoption of solar energy to reduce reliance on fossil fuels, lower energy costs, and combat climate change. It offers incentives, tax credits, and grants to encourage households and businesses to install solar energy systems.",
+        icon: 'tabler:solar-panel-2',
+      },
+      {
+        title: 'MVA (Motor Vehicle Accident)',
+        description:
+          'A Motor Vehicle Accident (MVA) refers to any collision involving vehicles on roadways, which can result in property damage, injuries, or fatalities. MVAs often require insurance claims, legal proceedings, and medical treatment for affected individuals, highlighting the importance of road safety.',
+        icon: 'tabler:car-crash',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Protocol with Client"
+    title="RTC will implement a process to keep clients updated"
+    items={[
+      {
+        title: 'Schedule Regular Meetings',
+        description:
+          'Decide on a consistent frequency (e.g., weekly, bi-weekly) and set calendar invites for these meetings in advance.',
+      },
+      {
+        title: 'Prepare Update Content',
+        description:
+          'Outline key milestones, accomplishments, and any challenges, and include visuals like charts or graphs to convey information effectively.',
+      },
+      {
+        title: 'Gather Feedback',
+        description:
+          'Present the update clearly, encourage questions, and solicit client feedback to ensure their needs are met and to make necessary adjustments for future updates.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Regular Updates</h3>
+      use diffrent mode to communicate on the ease of client
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Define the Report Structure',
+        description: `Establish a consistent format for the progress report, including sections like completed tasks, ongoing work, upcoming goals, and any roadblocks.`,
+      },
+      {
+        title: 'Include Key Metrics and Data',
+        description:
+          'Highlight quantitative data such as performance metrics, timelines, budgets, and key performance indicators (KPIs) to show measurable progress.',
+      },
+      {
+        title: 'Identify Risks and Challenges',
+        description:
+          "Provide transparency by outlining any issues, risks, or delays encountered, along with the steps being taken to address them.",
+      },
+      {
+        title: 'Share the Next Steps',
+        description:
+          'Clearly detail upcoming tasks, deadlines, and milestones to give the client a clear picture of what to expect in the near future.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content"></Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Establish Clear Communication Channels',
+        description:
+          'Agree on preferred methods for communication (email, phone, chat, or meetings) and ensure the client knows how to reach you for quick updates or questions.',
+      },
+      {
+        title: 'Be Responsive and Available',
+        description:
+          'Maintain a quick response time for client queries or concerns, demonstrating attentiveness and commitment to their needs.',
+      },
+      {
+        title: 'Encourage Feedback',
+        description:
+          'Regularly ask for client input on the project progress, communication style, or any potential concerns to improve collaboration.',
+      },
+      {
+        title: 'Document All Interactions',
+        description: `Keep records of important conversations and decisions for reference, ensuring both parties are on the same page and reducing the chance of misunderstandings.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Astronauts Image',
+    }}
+  >
+    <Fragment slot="content"></Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Steps to engage with RTC"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Reach Out</span>',
+        description:
+          "Initiate contact to express interest in a potential business agreement.",
+        icon: 'tabler:address-book',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Discuss the Business</span>',
+        description:
+          "Engage in discussions to outline objectives, expectations, and roles.",
+        icon: 'tabler:message-2',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Make Agreement</span>',
+        description:
+          'Draft and collaboratively review the key terms and conditions of the contract.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Contract!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Client Access to Key Elements"
+    subtitle="Provides frequently used components for building websites using Tailwind CSS"
+    tagline="Components"
+    items={[
+      {
+        title: 'Dashboard',
+        description: "We provide clients access to a dashboard for visibility into our operations.",
+        icon: 'flat-color-icons:bar-chart',
+      },
+      {
+        title: 'Real-time Process',
+        description:
+          "Client access to real-time processes allows clients to monitor project progress and updates instantly, enhancing transparency and collaboration",
+        icon: 'flat-color-icons:alarm-clock',
+      },
+      {
+        title: 'Budget Moniter',
+        description:
+          'Clients can view the budget monitor to track their expenses and manage their budget effectively.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Content',
+        description:
+          "Clients can review and amend the content of the business process to ensure it aligns with their needs and expectations.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Call-to-Action',
+        description:
+          'A Call-to-Action (CTA) directs clients to take the next step, such as making a purchase or requesting more information.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Human Resources',
+        description: 'Manages the talent and workforce to ensure quality service and compliance with labor standards.',
+        icon: 'flat-color-icons:manager',
+      },
+      {
+        title: 'Performance Tracker',
+        description: 'Our specialize performance Tracker allows clients to monitor progress and measure key metrics to ensure the project is on track and goals are being met.',
+        icon: 'flat-color-icons:bullish',
+      },
+      {
+        title: 'Sales Board',
+        description:
+          'A Sales Board provides clients with a visual overview of sales performance, tracking key metrics like revenue, deals closed, and progress toward targets in real-time.',
+        icon: 'flat-color-icons:area-chart',
+      },
+      {
+        title: 'Marketing and Advertisement',
+        description: "Our marketing and advertising efforts, combined with specialized bilingual agents, ensure high sales and turnover by effectively reaching and engaging diverse customer bases.",
+        icon: 'flat-color-icons:customer-support',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  {/* <BlogLatestPosts
+    title="Find out more content in our Blog"
+    information={`The blog is used to display AstroWind documentation.
+                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
+                        Astro is a very interesting technology. Thanks.
+                `}
+  /> */}
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle=""
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Client possible questions will appear here ?',
+        description:
+          "your awnser to the client will apear here.",
+      },
+      {
+        title: 'Client possible questions will appear here ?',
+        description:
+          'your awnser to the client will apear here.',
+      },
+      {
+        title: 'Client possible questions will appear here ?',
+        description:
+          "your awnser to the client will apear here.",
+      },
+      {
+        title: "Client possible questions will appear here ?",
+        description:
+          "your awnser to the client will apear here.",
+      },
+      {
+        title: 'Client possible questions will appear here ?',
+        description:
+          "your awnser to the client will apear here.",
+      },
+      {
+        title: 'Client possible questions will appear here ?',
+        description:
+          "your awnser to the client will apear here.",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Investors Visits', amount: '12K' },
+      { title: 'Revenue', amount: '$300K' },
+      { title: 'NO of sales', amount: '10.3K' },
+      { title: 'Startups Engagement', amount: '48.4K' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get qouta',
+        href: '#',
+        target: '_blank',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      &nbsp;&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">RTC</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Dive in to Telemarketing <br class="hidden md:inline" />
+    </Fragment>
+  </CallToAction>
+</Layout>
